@@ -78,5 +78,5 @@ jobs:
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
         service: fargate-service
-        cluster: default
+        cluster: FleetHawksCdkStack-FleetHawksCluster51F75FC0-6V8QFDVUPOGR
         wait-for-service-stability: true

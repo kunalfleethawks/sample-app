@@ -1,0 +1,17 @@
+{
+    "cluster": "FleetHawksCdkStack-FleetHawksCluster51F75FC0-6V8QFDVUPOGR",
+    "serviceName": "sample-service",
+    "taskDefinition": "fleet-hawks-app:1",
+    "desiredCount": 3,
+    "launchType": "FARGATE",
+    "networkConfiguration": {
+        "awsvpcConfiguration": {
+            "subnets": [
+                "subnet-025365df6a516d4c5",
+                "subnet-05fa81035e6e8648d"
+            ],
+           
+            "assignPublicIp": "DISABLED"
+        }
+    }
+}

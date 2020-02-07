@@ -4,6 +4,15 @@
     "networkMode": "awsvpc",
     "containerDefinitions": [
         {
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "secretOptions": null,
+                "options": {
+                    "awslogs-group": "/ecs/fleet-hawks-app",
+                    "awslogs-region": "us-east-1",
+                    "awslogs-stream-prefix": "ecs"
+                }
+            },
             "name": "sample-app",
             "image": "sample-app",
             "portMappings": [

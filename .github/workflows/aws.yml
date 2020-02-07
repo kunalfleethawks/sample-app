@@ -77,6 +77,6 @@ jobs:
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
-        service: fargate-service
+        service: sample-service
         cluster: FleetHawksCdkStack-FleetHawksCluster51F75FC0-6V8QFDVUPOGR
         wait-for-service-stability: true

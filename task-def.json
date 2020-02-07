@@ -1,5 +1,5 @@
 {
-    "executionRoleArn": "arn:aws:iam::112567001577:role/role_fleet_deployer_ecs",
+    "executionRoleArn": "arn:aws:iam::112567001577:role/FleetHawksCdkStack-myserviceTaskDefExecutionRoleE8-1Y9T2YXO296U",
     "family": "fleet-hawks-app",
     "networkMode": "awsvpc",
     "containerDefinitions": [

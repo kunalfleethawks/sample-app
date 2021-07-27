@@ -14,7 +14,9 @@ pipeline {
     stages {
         stage('Build & Test') {
             steps{
-                sh("echo kunal")
+                 nodejs(nodeJSInstallationName: 'nodejs12x') {
+                    sh 'npm config ls'
+                }
             }
         }      
 

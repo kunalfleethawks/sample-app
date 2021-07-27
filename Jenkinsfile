@@ -23,18 +23,20 @@ pipeline {
 
         stage('Build Docker Image') {
             steps{
+                sh("echo kunal")
             }
         
         }
 
         stage('Push Image to ECR') {
             steps{
+                sh("echo kunal")
             }
-        
         }
 
         stage('Deploy in ECS') {
             steps{
+                sh("echo kunal")
             }
         }
     }

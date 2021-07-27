@@ -14,7 +14,7 @@ pipeline {
         stage('Build & Test') {
             steps{
                  nodejs(nodeJSInstallationName: 'nodejs12x') {
-                    sh 'npm install'                   
+                    sh 'npm install && npm run build'                   
                 }
             }
         }      

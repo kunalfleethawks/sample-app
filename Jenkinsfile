@@ -3,20 +3,41 @@
 pipeline {
     agent any
 
-    options {}
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '10'))
+        disableConcurrentBuilds()
+        timeout(time: 1, unit: 'HOURS')
+        timestamps() 
+     }
 
     tools {}
 
     environment {}
 
     stages {
-        stage('Build & Test') {}
+        stage('Build & Test') {
+        steps {
+           
+        
+        }
+       }}
 
-        stage('Build Docker Image') {}
+        stage('Build Docker Image') {
+            steps{
+            }
+        
+        }
 
-        stage('Push Image to ECR') {}
+        stage('Push Image to ECR') {
+            steps{
+            }
+        
+        }
 
-        stage('Deploy in ECS') {}
+        stage('Deploy in ECS') {
+            steps{
+            }
+        }
     }
 
     post {}

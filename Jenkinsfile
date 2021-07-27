@@ -10,10 +10,7 @@ pipeline {
         timestamps() 
      }
 
-    tools {}
-
-    environment {}
-
+ 
     stages {
         stage('Build & Test') {
             steps{

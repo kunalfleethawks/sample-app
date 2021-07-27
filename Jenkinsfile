@@ -1,7 +1,6 @@
 #!/usr/bin/env groovy
 
-pipeline {
-    agent any
+pipeline {   
 
     options {
         buildDiscarder(logRotator(numToKeepStr: '10'))
@@ -15,7 +14,7 @@ pipeline {
         stage('Build & Test') {
             steps{
                  nodejs(nodeJSInstallationName: 'nodejs12x') {
-                    sh 'npm config ls'
+                    sh 'npm install'                   
                 }
             }
         }      

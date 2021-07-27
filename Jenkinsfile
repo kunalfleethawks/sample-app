@@ -14,24 +14,18 @@ pipeline {
         stage('Build & Test') {
             steps{
                  nodejs(nodeJSInstallationName: 'nodejs12x') {
-                    sh 'npm install'                   
+                    sh 'npm install && node --version'                   
                 }
             }
         }      
 
-        stage('Build Docker Image') {
+        stage('Build Docker Image using Code Build') {
             steps{
-                awscodebuild credentialsId: 'was-code-build-grovvy', credentialsType: 'jenkins', downloadArtifacts: 'false', projectName: 'new-jenkins-project', region: 'ap-south-1', sourceControlType: 'jenkins'
+                awsCodebuild credentialsId: 'was-code-build-grovvy', credentialsType: 'jenkins', downloadArtifacts: 'false', projectName: 'new-jenkins-project', region: 'ap-south-1', sourceControlType: 'jenkins'
             }
         
         }
-
-        stage('Push Image to ECR') {
-            steps{
-                sh("echo kunal")
-            }
-        }
-
+        
         stage('Deploy in ECS') {
             steps{
                 sh("echo kunal")

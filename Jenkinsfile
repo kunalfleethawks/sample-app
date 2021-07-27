@@ -21,7 +21,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps{
-                sh("echo kunal")
+                awscodebuild awsCodeBuild  credentialsId: 'was-code-build-grovvy', credentialsType: 'jenkins', downloadArtifacts: 'false', projectName: 'new-jenkins-project', region: 'ap-south-1', sourceControlType: 'jenkins'
             }
         
         }

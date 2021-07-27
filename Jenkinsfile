@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
-pipeline {   
-
+pipeline {
+    agent any   
     options {
         buildDiscarder(logRotator(numToKeepStr: '10'))
         disableConcurrentBuilds()

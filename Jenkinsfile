@@ -16,11 +16,9 @@ pipeline {
 
     stages {
         stage('Build & Test') {
-        steps {
-           
-        
-        }
-       }}
+            steps{
+            }
+        }      
 
         stage('Build Docker Image') {
             steps{

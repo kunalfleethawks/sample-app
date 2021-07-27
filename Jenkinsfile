@@ -17,7 +17,7 @@ pipeline {
     stages {
         stage('Build & Test') {
             steps{
-                sh("echo kunal"
+                sh("echo kunal")
             }
         }      
 
